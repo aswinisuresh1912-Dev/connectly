@@ -1,0 +1,339 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: #f5f7fb;
+  color: #1f2937;
+}
+
+button {
+  border: none;
+  border-radius: 8px;
+  padding: 9px 15px;
+  background: #2563eb;
+  color: white;
+  cursor: pointer;
+  font-size: 14px;
+  transition: 0.2s ease;
+}
+
+button:hover {
+  background: #1d4ed8;
+  transform: translateY(-1px);
+}
+
+/* Login */
+
+.login-page {
+  min-height: 100vh;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  background:
+    radial-gradient(
+      circle at top left,
+      #dbeafe,
+      transparent 35%
+    ),
+    radial-gradient(
+      circle at bottom right,
+      #e0e7ff,
+      transparent 35%
+    ),
+    #f8fafc;
+}
+
+.login-box {
+  width: 360px;
+  padding: 40px;
+
+  background: white;
+  border-radius: 18px;
+
+  text-align: center;
+
+  box-shadow:
+    0 15px 40px
+    rgba(15, 23, 42, 0.12);
+}
+
+.login-box h1 {
+  margin-bottom: 8px;
+  color: #2563eb;
+}
+
+.login-box p {
+  color: #64748b;
+}
+
+.login-box form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+
+  margin-top: 25px;
+}
+
+.login-box input {
+  padding: 13px;
+
+  border: 1px solid #dbe1ea;
+  border-radius: 8px;
+
+  font-size: 14px;
+  outline: none;
+}
+
+.login-box input:focus {
+  border-color: #2563eb;
+}
+
+/* Navbar */
+
+.navbar {
+  height: 70px;
+  padding: 0 7%;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  background: white;
+
+  border-bottom: 1px solid #e5e7eb;
+}
+
+.navbar h1 {
+  color: #2563eb;
+}
+
+.navbar button {
+  margin-left: 18px;
+  background: #ef4444;
+}
+
+.navbar button:hover {
+  background: #dc2626;
+}
+
+/* Main layout */
+
+.layout {
+  width: 92%;
+  max-width: 1200px;
+
+  margin: 30px auto;
+
+  display: grid;
+  grid-template-columns: 300px 1fr;
+
+  gap: 30px;
+}
+
+/* Sidebar */
+
+.sidebar {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.profile-box,
+.people-box,
+.create-post,
+.post {
+  background: white;
+  padding: 22px;
+
+  border-radius: 14px;
+
+  border: 1px solid #e5e7eb;
+
+  box-shadow:
+    0 5px 20px
+    rgba(15, 23, 42, 0.04);
+}
+
+.profile-box {
+  text-align: center;
+}
+
+.avatar {
+  width: 75px;
+  height: 75px;
+
+  margin: auto;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 50%;
+
+  background: #2563eb;
+  color: white;
+
+  font-size: 30px;
+  font-weight: bold;
+}
+
+.avatar.small {
+  width: 42px;
+  height: 42px;
+
+  margin: 0;
+
+  font-size: 18px;
+}
+
+.stats {
+  display: flex;
+  justify-content: space-around;
+
+  margin-top: 20px;
+}
+
+.stats span {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+
+  color: #64748b;
+}
+
+.stats b {
+  color: #1f2937;
+  font-size: 18px;
+}
+
+/* People */
+
+.person {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  padding: 12px 0;
+
+  border-bottom: 1px solid #eef0f3;
+}
+
+.person button {
+  padding: 7px 12px;
+}
+
+/* Create post */
+
+.create-post textarea {
+  width: 100%;
+  min-height: 100px;
+
+  padding: 12px;
+
+  border: 1px solid #dbe1ea;
+  border-radius: 9px;
+
+  resize: vertical;
+
+  font: inherit;
+  outline: none;
+}
+
+.create-post textarea:focus {
+  border-color: #2563eb;
+}
+
+.create-post button {
+  margin-top: 12px;
+}
+
+/* Posts */
+
+.post {
+  margin-top: 20px;
+}
+
+.post-header {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.post-content {
+  margin: 20px 0;
+
+  line-height: 1.6;
+  color: #374151;
+}
+
+.post-actions {
+  border-top: 1px solid #eef0f3;
+
+  padding-top: 12px;
+}
+
+.post-actions button {
+  background: transparent;
+  color: #374151;
+
+  font-size: 18px;
+}
+
+.post-actions button:hover {
+  background: #f1f5f9;
+  transform: none;
+}
+
+/* Comments */
+
+.comments {
+  margin-top: 15px;
+  padding-top: 10px;
+
+  border-top: 1px solid #eef0f3;
+}
+
+.comments p {
+  padding: 8px 0;
+}
+
+.comment-form {
+  display: flex;
+  gap: 8px;
+}
+
+.comment-form input {
+  flex: 1;
+
+  padding: 10px;
+
+  border: 1px solid #dbe1ea;
+  border-radius: 7px;
+
+  outline: none;
+}
+
+.comment-form input:focus {
+  border-color: #2563eb;
+}
+
+/* Mobile */
+
+@media (max-width: 800px) {
+  .layout {
+    grid-template-columns: 1fr;
+  }
+
+  .navbar {
+    padding: 0 20px;
+  }
+
+  .comment-form {
+    flex-direction: column;
+  }
+}
